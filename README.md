@@ -1,0 +1,2 @@
+# StudentCorner
+Minor Project
