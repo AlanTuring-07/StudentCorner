@@ -56,7 +56,7 @@ function nextClass(i,j) {
             classNumber++;
             window.open(routine[i][j]);
             nextClass(i, j);
-        }, 3600000);
+        }, 10000);
     }
     else {
         alert("This is your last class.The program ends now :)");
