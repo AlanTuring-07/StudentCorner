@@ -56,7 +56,7 @@ function nextClass(i,j) {
             classNumber++;
             window.open(routine[i][j]);
             nextClass(i, j);
-        }, 20000);
+        }, 25000);
     }
     else {
         alert("This is your last class.The program ends now :)");
@@ -121,7 +121,7 @@ function startClass() {
 
     //9:30 - 10:30
     else if ((hours === 9 && minutes>=30) || (hours === 10 && minutes <30)) {
-        if (hours === 8) {
+        if (hours === 9) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -132,12 +132,13 @@ function startClass() {
         count = 1;
         classNumber += count;
         window.open(routine[day][count]); //opens the second class
+        timereq = 15000;
         beginClass(timereq,day,count);
     }
 
     //10:30 - 11:30
     else if ((hours === 10 && minutes>=30) || (hours === 11 && minutes <30)) {
-        if (hours === 8) {
+        if (hours === 10) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -148,12 +149,13 @@ function startClass() {
         count = 2;
         classNumber += count;
         window.open(routine[day][count]); //opens the third class
+        timereq = 15000;
         beginClass(timereq,day,count);
     }
 
     //11:30-12:30
     else if ((hours === 11 && minutes>=30) || (hours === 12 && minutes <30)) {
-        if (hours === 8) {
+        if (hours === 11) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -177,3 +179,4 @@ function startClass() {
 function stopClass() {
     window.open('', '_self').close();
 }
+
