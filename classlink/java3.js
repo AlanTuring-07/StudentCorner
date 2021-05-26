@@ -84,8 +84,8 @@ function startClass() {
     alert("If you are using this app for the first time, allow the pop up for this app to work");
 
     //clicking before classes start -- before 8:30
-    if ((hours === 8 && minutes < 30) || (hours <= 8)) {
-        if (hours === 8) {
+    if ((hours === 9 && minutes < 30) || (hours <= 9)) {
+        if (hours === 9) {
             alert("Your class will automatically start at the right time.Relax and Go back to Sleep!!");
             timereq += (29 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
@@ -105,8 +105,8 @@ function startClass() {
     }
 
     //8:30 - 9:30
-    else if ((hours === 8 && minutes >= 30) || (hours === 9 && minutes < 30)) {
-        if (hours === 8) {
+    else if ((hours === 9 && minutes >= 30) || (hours === 10 && minutes < 30)) {
+        if (hours === 10) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -120,8 +120,8 @@ function startClass() {
     }
 
     //9:30 - 10:30
-    else if ((hours === 9 && minutes>=30) || (hours === 10 && minutes <30)) {
-        if (hours === 9) {
+    else if ((hours === 10 && minutes>=30) || (hours === 11 && minutes <30)) {
+        if (hours === 10) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -137,8 +137,8 @@ function startClass() {
     }
 
     //10:30 - 11:30
-    else if ((hours === 10 && minutes>=30) || (hours === 11 && minutes <30)) {
-        if (hours === 10) {
+    else if ((hours === 11 && minutes>=30) || (hours === 12 && minutes <30)) {
+        if (hours === 11) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -154,8 +154,8 @@ function startClass() {
     }
 
     //11:30-12:30
-    else if ((hours === 11 && minutes>=30) || (hours === 12 && minutes <30)) {
-        if (hours === 11) {
+    else if ((hours === 12 && minutes>=30) || (hours === 13 && minutes <30)) {
+        if (hours === 12) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -179,3 +179,4 @@ function startClass() {
 function stopClass() {
     window.open('', '_self').close();
 }
+
