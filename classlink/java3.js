@@ -56,7 +56,7 @@ function nextClass(i,j) {
             classNumber++;
             window.open(routine[i][j]);
             nextClass(i, j);
-        }, 360000);
+        }, 3600000);
     }
     else {
         alert("This is your last class.The program ends now :)");
@@ -84,8 +84,8 @@ function startClass() {
     alert("If you are using this app for the first time, allow the pop up for this app to work");
 
     //clicking before classes start -- before 8:30
-    if ((hours === 9 && minutes < 30) || (hours <= 9)) {
-        if (hours === 9) {
+    if ((hours === 8 && minutes < 30) || (hours <= 8)) {
+        if (hours === 8) {
             alert("Your class will automatically start at the right time.Relax and Go back to Sleep!!");
             timereq += (29 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
@@ -105,8 +105,8 @@ function startClass() {
     }
 
     //8:30 - 9:30
-    else if ((hours === 9 && minutes >= 30) || (hours === 10 && minutes < 30)) {
-        if (hours === 10) {
+    else if ((hours === 8 && minutes >= 30) || (hours === 9 && minutes < 30)) {
+        if (hours === 8) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -120,8 +120,8 @@ function startClass() {
     }
 
     //9:30 - 10:30
-    else if ((hours === 10 && minutes>=30) || (hours === 11 && minutes <30)) {
-        if (hours === 10) {
+    else if ((hours === 9 && minutes>=30) || (hours === 10 && minutes <30)) {
+        if (hours === 9) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -132,13 +132,12 @@ function startClass() {
         count = 1;
         classNumber += count;
         window.open(routine[day][count]); //opens the second class
-        timereq = 15000;
         beginClass(timereq,day,count);
     }
 
     //10:30 - 11:30
-    else if ((hours === 11 && minutes>=30) || (hours === 12 && minutes <30)) {
-        if (hours === 11) {
+    else if ((hours === 10 && minutes>=30) || (hours === 11 && minutes <30)) {
+        if (hours === 10) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
@@ -149,19 +148,18 @@ function startClass() {
         count = 2;
         classNumber += count;
         window.open(routine[day][count]); //opens the third class
-        timereq = 15000;
         beginClass(timereq,day,count);
     }
 
     //11:30-12:30
-    else if ((hours === 12 && minutes>=30) || (hours === 13 && minutes <30)) {
-        if (hours === 12) {
+    else if ((hours === 11 && minutes>=30) || (hours === 12 && minutes <30)) {
+        if (hours === 11) {
             timereq += (89 - minutes) * 60000;
             timereq += (60 - seconds) * 1000;
         }
         else {
             timereq += (29 - minutes) * 60000;
-            timereq += (60 - seconds) * 1000;
+            timereq += (60 - seconds) * 1000; 
         }
         count = 3;
         classNumber += count;
